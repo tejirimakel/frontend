@@ -1,38 +1,378 @@
-.App {
-  text-align: center;
+body {
+  /* UI Properties */
+  background: #f6f7f8 0% 0% no-repeat padding-box;
+  opacity: 1;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menubar {
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 70px;
+  opacity: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menubar.flex.items-center.justify-between {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  top: 30px;
+  left: 50px;
+  width: 211px;
+  height: 48px;
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  top: 23px;
+  left: 473px;
+  width: 663px;
+  height: 63px;
+  /* UI Properties */
+  opacity: 1;
+}
+
+.profile {
+  top: 32px;
+  left: 1309px;
+  width: 44px;
+  height: 44px;
+  background: transparent
+    url("assets/img/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png")
+    0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.Nm {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-14) / var(--unnamed-line-spacing-19)
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal bold 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  opacity: 1;
+}
+
+.po {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-14) /
+    var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-707070);
+  text-align: left;
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.vertical-border {
+  top: 32px;
+  left: 1502px;
+  width: 1px;
+  height: 44px;
+  /* UI Properties */
+  background: var(--unnamed-color-ededed) 0% 0% no-repeat padding-box;
+  background: #ededed 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.nav a {
+  /* UI Properties */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-14) / var(--unnamed-line-spacing-19)
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal bold 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  opacity: 1;
+}
+
+.icon {
+  top: 46px;
+  left: 473px;
+  width: 16px;
+  height: 17px;
+}
+
+.iconBox {
+  width: 42px;
+  height: 42px;
+  /* UI Properties */
+  background: transparent 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.iconBtn {
+  width: auto;
+  height: 41px;
+  /* UI Properties */
+  background: var(--activestate_bg_1) 0% 0% no-repeat padding-box;
+  background: #01f0d0 0% 0% no-repeat padding-box;
+  border-radius: 41px;
+  opacity: 1;
+}
+.SeeBtn {
+  width: 220px;
+  height: 41px;
+  background: var(--activestate_bg_1) 0% 0% no-repeat padding-box;
+  background: #01f0d0 0% 0% no-repeat padding-box;
+  border-radius: 41px;
+  opacity: 1;
+}
+
+.App {
+  height: 1195px;
+  background: #f6f7f8 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.one {
+  width: 367px;
+  height: 1054px;
+
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  opacity: 1;
+
+  overflow-y: auto;
+  max-height: 1054px;
+}
+
+.two {
+  /* Layout Properties */
+  width: 720px;
+  height: fit-content;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  opacity: 1;
+}
+
+.three {
+  width: 367px;
+  height: fit-content;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  opacity: 1;
+}
+
+.four {
+  width: 720px;
+  height: 349px;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  opacity: 1;
+  overflow-y: auto;
+  max-height: 349px;
+}
+
+.five {
+  width: 367px;
+  height: 296px;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  opacity: 1;
+  overflow-y: auto;
+  max-height: 296px;
+}
+
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  background: transparent 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.card-title {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-800)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-33)
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: center;
+  font: normal normal 800 24px/33px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  opacity: 1;
+}
+
+.card-text1 {
+  /* UI Properties */
+  font: var(--unnamed-font-style-normal) normal medium
+    var(--unnamed-font-size-14) / var(--unnamed-line-spacing-19)
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal medium 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.card-text2 {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-14) / var(--unnamed-line-spacing-19)
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal bold 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.heading-text {
+  /* UI Properties */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-800)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-33)
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal 800 24px/33px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  opacity: 1;
+}
+
+.BPData {
+  height: fit-content;
+  /* UI Properties */
+  background: #f4f0fe 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  opacity: 1;
+}
+
+.ImgBox1 {
+  width: auto;
+  height: 242px;
+  background: #e0f3fa 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  opacity: 1;
+}
+
+.ImgBox2 {
+  width: auto;
+  height: 242px;
+  border-radius: 12px;
+  opacity: 1;
+  background: #ffe6e9 0% 0% no-repeat padding-box;
+}
+
+.dtext {
+  font: var(--unnamed-font-style-normal) normal medium 16px/22px
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal medium 16px/22px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.dstat {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-14) /
+    var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  opacity: 1;
+}
+
+.dno {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-800)
+    30px/41px var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal 800 30px/41px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  opacity: 1;
+}
+
+.btext {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-18) / var(--unnamed-line-spacing-24)
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal bold 18px/24px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.dtext {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-14) / var(--unnamed-line-spacing-19)
+    var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal bold 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.dvalue {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    22px/30px var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal bold 22px/30px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.dlevel {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-14) /
+    var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-072635);
+  text-align: left;
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: #072635;
+  opacity: 1;
 }
