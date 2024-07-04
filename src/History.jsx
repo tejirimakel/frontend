@@ -62,7 +62,7 @@ function History({ patient }) {
     responsive: true,
     plugins: {
       legend: {
-        display: true,
+        display: false,
       },
     },
     scales: {
@@ -75,13 +75,13 @@ function History({ patient }) {
 
   return (
     <>
-      <div className="two p-4 mt-2">
+      <div className="two p-4 w-full">
         <div className="container my-5 mx-auto">
           <div className="card px-4">
             <h5 className="heading-text">Diagnosis History</h5>
-            <div className="BPData p-4 mt-8 mb-4 w-[560px]">
-              <div className="p-4 bg-white rounded-lg shadow-md">
-                <div className="flex items-center justify-between">
+            <div className="BPData p-4 mt-8 mb-4">
+              <div className="p-4 rounded-lg">
+                <div className="flex items-center justify-between pb-6">
                   <h2 className="btext text-lg font-semibold text-gray-700 mb-2">
                     Blood Pressure
                   </h2>
@@ -90,11 +90,12 @@ function History({ patient }) {
                     <img src={Down} alt="down" className="" />
                   </div>
                 </div>
-                <div className="flex space-x-14">
-                  <Line data={chartData} options={options} />
-
-                  <div className="w-max">
-                    <div className="py-2 -mt-8">
+                <div className="lg:flex items-center lg:space-x-4 space-y-8 lg:space-y-0">
+                  <div className="lg:w-3/4">
+                    <Line data={chartData} options={options} />
+                  </div>
+                  <div className="lg:w-max lg:flex-none">
+                    <div className="py-4">
                       <div className="flex items-center space-x-2 pb-2">
                         <div className="bg-[#ec4899] rounded-full w-3 h-3"></div>
                         <p className="dtext">Systolic</p>
@@ -103,7 +104,7 @@ function History({ patient }) {
                         {filteredDiagnosisHistory[0]?.blood_pressure?.systolic
                           ?.value ?? "N/A"}
                       </h3>
-                      <div className="flex items center space-x-4">
+                      <div className="flex items-center space-x-4">
                         <img src={arrowUp} alt="arrowUp" className="" />
                         <p className="dlevel">
                           {filteredDiagnosisHistory[0]?.blood_pressure?.systolic
@@ -112,7 +113,7 @@ function History({ patient }) {
                       </div>
                     </div>
                     <hr />
-                    <div className="py-2">
+                    <div className="py-4">
                       <div className="flex items-center space-x-2 pb-2">
                         <div className="bg-[#a78bfa] rounded-full w-3 h-3"></div>
                         <p className="dtext">Diastolic</p>
@@ -133,7 +134,7 @@ function History({ patient }) {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-x-4">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
               {/* Respiratory Rate */}
               <div className="ImgBox1 p-6">
                 <img src={Rest} alt="Respiratory Rate" className="" />
@@ -165,18 +166,20 @@ function History({ patient }) {
                 </p>
               </div>
               {/* Heart Rate */}
-              <div className="ImgBox2 p-6">
-                <img src={Heart} alt="Heart Rate" className="" />
-                <div className="my-3">
-                  <p className="dtext">Heart Rate</p>
-                  <h2 className="dno">
-                    {patient.diagnosis_history[0]?.heart_rate?.value ?? "N/A"}{" "}
-                    bpm
-                  </h2>
+              <div className="ImgBox2 p-6 col-span-2 lg:col-auto">
+                <div className="">
+                  <img src={Heart} alt="Heart Rate" className="" />
+                  <div className="my-3">
+                    <p className="dtext">Heart Rate</p>
+                    <h2 className="dno">
+                      {patient.diagnosis_history[0]?.heart_rate?.value ?? "N/A"}{" "}
+                      bpm
+                    </h2>
+                  </div>
+                  <p className="dstat">
+                    {patient.diagnosis_history[0]?.heart_rate?.levels ?? "N/A"}
+                  </p>
                 </div>
-                <p className="dstat">
-                  {patient.diagnosis_history[0]?.heart_rate?.levels ?? "N/A"}
-                </p>
               </div>
             </div>
           </div>

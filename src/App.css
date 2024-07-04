@@ -140,22 +140,16 @@ body {
 }
 
 .one {
-  width: 367px;
-  height: 1054px;
-
   /* UI Properties */
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 16px;
   opacity: 1;
-
-  overflow-y: auto;
-  max-height: 1054px;
 }
 
 .two {
   /* Layout Properties */
-  width: 720px;
+
   height: fit-content;
   /* UI Properties */
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -165,7 +159,6 @@ body {
 }
 
 .three {
-  width: 367px;
   height: fit-content;
   /* UI Properties */
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -175,7 +168,6 @@ body {
 }
 
 .four {
-  width: 720px;
   height: 349px;
   /* UI Properties */
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -187,14 +179,12 @@ body {
 }
 
 .five {
-  width: 367px;
-  height: 296px;
   /* UI Properties */
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 16px;
   opacity: 1;
-  overflow-y: auto;
+
   max-height: 296px;
 }
 

@@ -17,7 +17,7 @@ function PatientData({ patient }) {
 
   return (
     <>
-      <div className="three p-4">
+      <div className="three p-4 w-full lg:w-max">
         <div className="container mt-5 mx-auto">
           <div>
             <div className="card px-4">
@@ -79,30 +79,15 @@ function PatientData({ patient }) {
                     </div>
                   </div>
                 </div>
-                <div className="">
-                  <div style={{ display: isDetailsVisible ? "block" : "none" }}>
+                <div className="w-full lg:w-max">
+                  <div
+                    style={{
+                      display: isDetailsVisible ? "block" : "none",
+                    }}
+                  >
                     <p className="card-text">Age: {patient.age}</p>
-                    <h5 className="card-subtitle mb-2 text-muted">
-                      Diagnostic List
-                    </h5>
-                    <ul>
-                      {patient.diagnostic_list.map((diagnostic, i) => (
-                        <li key={i}>
-                          {diagnostic.name}: {diagnostic.description} - Status:{" "}
-                          {diagnostic.status}
-                        </li>
-                      ))}
-                    </ul>
-                    <h5 className="card-subtitle mb-2 text-muted">
-                      Lab Results
-                    </h5>
-                    <ul>
-                      {patient.lab_results.map((result, i) => (
-                        <li key={i}>{result}</li>
-                      ))}
-                    </ul>
                   </div>
-                  <div className="flex flex-col items-center justify-center my-3">
+                  <div className="flex items-center justify-center my-3">
                     <button
                       className="SeeBtn"
                       onClick={toggleDetailsVisibility}

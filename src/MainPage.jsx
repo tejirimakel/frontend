@@ -42,16 +42,18 @@ const Main = () => {
 
   return (
     <>
-      <div className="py-6">
-        <div className="grid grid-flow-col auto-cols-max gap-x-6 gap-y-4">
-          <PatientList />
-          <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-x-6">
+      <div className="py-6 w-full">
+        <div className="flex flex-col lg:flex-row gap-x-6 gap-y-4">
+          <div className="w-full lg:w-max">
+            <PatientList />
+          </div>
+          <div className="pb-4 w-full">
+            <div className="flex flex-col lg:flex-row gap-x-6 gap-y-4 mb-6">
               {patient && <History patient={patient} />}
               {patient && <PatientData patient={patient} />}
             </div>
-            <div className="grid grid-cols-2 gap-x-6">
-              <div className="four p-4">
+            <div className="flex flex-col lg:flex-row gap-x-6 gap-y-4">
+              <div className="four p-4 w-full">
                 <div className="container my-5 mx-auto">
                   <div className="card px-4">
                     <h5 className="heading-text">Diagnosis List</h5>
@@ -93,15 +95,15 @@ const Main = () => {
                   </div>
                 </div>
               </div>
-              <div className="five p-4">
+              <div className="five p-4 w-full lg:w-[30%] lg:-mt-14 overflow-hidden hover:overflow-y-auto">
                 <div className="container my-5 mx-auto">
-                  <div className="card px-4">
+                  <div className="card px-1">
                     <h5 className="heading-text">Lab Results</h5>
                     <ul className="mt-4">
                       {patient?.lab_results.map((result, index) => (
                         <div
                           key={index}
-                          className="flex items-center justify-between hover:bg-gray-300 px-6 rounded-lg"
+                          className="flex items-center justify-between hover:bg-gray-300 px-4 w-full rounded-lg"
                         >
                           <li className="border-b border-gray-200 w-full py-3">
                             {result}
